@@ -22,24 +22,29 @@ Use the Jupyter Notebook to explore and solve this task. You can use Jupyter Not
 
 ## Module 2 - Integration with C
 
-The software of an autonomous car is composed of many components, which require integration. 
+The software of an autonomous car is composed of many components, which require integration.
 
-The goal of this second task is to integrate the work you developed previously with a C program. 
+We use C/C++ on most of the software because it provides more control and is usually more performant than Python.
+
+The goal of this second task is to integrate the work you developed previously with a C program.
+
+The procedure is the same as in the first part: work on your fork and create a pull request.
 
 ### Functional requirements
 
 - First, change the script notebook code to save the trained model after training.
   - https://pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html
-- Create a new Python script which:
-  - Loads the saved model;
-  - Connect to the named pipe created by the C program;
-  - Run inference on a random dataset image;
-  - Send the inference result to the C process.
 - Create a C program which:
   - Creates a named pipe;
   - Accepts the Python pipe connection;
   - Waits for data (the class prediction);
   - Prints the results on the console.
+- Create a new Python script which:
+  - Loads the saved model;
+  - Runs inference on a random dataset image;
+  - Connects to the named pipe created by the C program;
+  - Sends the inference result to the C process.
+
 
 ### Recommended environment
 - To solve this task, you should use some Linux distribution. Feel free to install a virtual machine. This is for the 
